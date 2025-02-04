@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .featured-post {
+            flex: 1 1 600px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .featured-post h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #007AFF;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .recent-posts {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .post-card {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .post-card .post-content {
+            flex: 1;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .post-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-card .date {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .post-card {
+                flex-direction: column;
+            }
+            
+            .post-card img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog Title</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus nulla ut commodo sagittis</p>
+        </header>
+
+        <main class="content">
+            <article class="featured-post">
+                <img src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?w=800&auto=format&fit=crop" alt="Featured post image">
+                <div class="post-content">
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus, nec ut commodo...</p>
+                    <div class="post-meta">
+                        <span class="date">15 Feb 2024</span>
+                        <span class="category">Category</span>
+                        <span class="author">Adam Smith</span>
+                    </div>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <aside class="recent-posts">
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=400&auto=format&fit=crop" alt="Post image">
+                    <div class="post-content">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus, nec ut commodo</p>
+                        <span class="date">20 Jan 2024</span>
+                        <a href="#" class="arrow">→</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1463288889890-a56b2853c40f?w=400&auto=format&fit=crop" alt="Post image">
+                    <div class="post-content">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus, nec ut commodo</p>
+                        <span class="date">10 Jan 2024</span>
+                        <a href="#" class="arrow">→</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?w=400&auto=format&fit=crop" alt="Post image">
+                    <div class="post-content">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet nulla adipiscing elit. Nunc maximus, nec ut commodo</p>
+                        <span class="date">18 Dec 2023</span>
+                        <a href="#" class="arrow">→</a>
+                    </div>
+                </article>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
